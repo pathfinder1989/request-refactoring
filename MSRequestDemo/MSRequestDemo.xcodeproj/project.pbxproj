@@ -14,6 +14,8 @@
 		C5C943191F54190E00662B7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5C943171F54190E00662B7D /* Main.storyboard */; };
 		C5C9431B1F54190E00662B7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5C9431A1F54190E00662B7D /* Assets.xcassets */; };
 		C5C9431E1F54190E00662B7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5C9431C1F54190E00662B7D /* LaunchScreen.storyboard */; };
+		C5C9432C1F54208E00662B7D /* MSBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C9432B1F54208E00662B7D /* MSBaseRequest.m */; };
+		C5C9432F1F5420DC00662B7D /* MSRequestConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C9432E1F5420DC00662B7D /* MSRequestConfig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,10 @@
 		C5C9431A1F54190E00662B7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5C9431D1F54190E00662B7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5C9431F1F54190E00662B7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5C9432A1F54208E00662B7D /* MSBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSBaseRequest.h; path = ../../MSRequest/MSBaseRequest.h; sourceTree = "<group>"; };
+		C5C9432B1F54208E00662B7D /* MSBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSBaseRequest.m; path = ../../MSRequest/MSBaseRequest.m; sourceTree = "<group>"; };
+		C5C9432D1F5420DC00662B7D /* MSRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSRequestConfig.h; path = ../../MSRequest/MSRequestConfig.h; sourceTree = "<group>"; };
+		C5C9432E1F5420DC00662B7D /* MSRequestConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSRequestConfig.m; path = ../../MSRequest/MSRequestConfig.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 		C5C9430D1F54190E00662B7D /* MSRequestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C5C943291F54207900662B7D /* MSRequest */,
 				C5C943111F54190E00662B7D /* AppDelegate.h */,
 				C5C943121F54190E00662B7D /* AppDelegate.m */,
 				C5C943141F54190E00662B7D /* ViewController.h */,
@@ -92,6 +99,17 @@
 				C5C9430F1F54190E00662B7D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C5C943291F54207900662B7D /* MSRequest */ = {
+			isa = PBXGroup;
+			children = (
+				C5C9432A1F54208E00662B7D /* MSBaseRequest.h */,
+				C5C9432B1F54208E00662B7D /* MSBaseRequest.m */,
+				C5C9432D1F5420DC00662B7D /* MSRequestConfig.h */,
+				C5C9432E1F5420DC00662B7D /* MSRequestConfig.m */,
+			);
+			name = MSRequest;
 			sourceTree = "<group>";
 		};
 		D3C4C3F43A8C5031ADDF16DB /* Pods */ = {
@@ -227,6 +245,8 @@
 			files = (
 				C5C943161F54190E00662B7D /* ViewController.m in Sources */,
 				C5C943131F54190E00662B7D /* AppDelegate.m in Sources */,
+				C5C9432C1F54208E00662B7D /* MSBaseRequest.m in Sources */,
+				C5C9432F1F5420DC00662B7D /* MSRequestConfig.m in Sources */,
 				C5C943101F54190E00662B7D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
