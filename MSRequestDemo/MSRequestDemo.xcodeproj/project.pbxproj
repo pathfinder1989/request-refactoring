@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41F699FA5D4E418E3738BA8C /* libPods-MSRequestDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E087AA7D0714247900213C2 /* libPods-MSRequestDemo.a */; };
 		C5C943101F54190E00662B7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C9430F1F54190E00662B7D /* main.m */; };
 		C5C943131F54190E00662B7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C943121F54190E00662B7D /* AppDelegate.m */; };
 		C5C943161F54190E00662B7D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C943151F54190E00662B7D /* ViewController.m */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E087AA7D0714247900213C2 /* libPods-MSRequestDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MSRequestDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		318FC9CC00231BCA81BE4EC5 /* Pods-MSRequestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSRequestDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MSRequestDemo/Pods-MSRequestDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		41E7A5A2454D24B99DB035F5 /* Pods-MSRequestDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSRequestDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MSRequestDemo/Pods-MSRequestDemo.release.xcconfig"; sourceTree = "<group>"; };
 		C5C9430B1F54190E00662B7D /* MSRequestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSRequestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C9430F1F54190E00662B7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C5C943111F54190E00662B7D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41F699FA5D4E418E3738BA8C /* libPods-MSRequestDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A158A881EC41A4660EF7751 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E087AA7D0714247900213C2 /* libPods-MSRequestDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C5C943021F54190E00662B7D = {
 			isa = PBXGroup;
 			children = (
 				C5C9430D1F54190E00662B7D /* MSRequestDemo */,
 				C5C9430C1F54190E00662B7D /* Products */,
+				D3C4C3F43A8C5031ADDF16DB /* Pods */,
+				6A158A881EC41A4660EF7751 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +94,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D3C4C3F43A8C5031ADDF16DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				318FC9CC00231BCA81BE4EC5 /* Pods-MSRequestDemo.debug.xcconfig */,
+				41E7A5A2454D24B99DB035F5 /* Pods-MSRequestDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5C943221F54190E00662B7D /* Build configuration list for PBXNativeTarget "MSRequestDemo" */;
 			buildPhases = (
+				AB12DD84A7D815016A112B8C /* [CP] Check Pods Manifest.lock */,
 				C5C943071F54190E00662B7D /* Sources */,
 				C5C943081F54190E00662B7D /* Frameworks */,
 				C5C943091F54190E00662B7D /* Resources */,
+				EA9F0AF39A3CC8C718A92830 /* [CP] Embed Pods Frameworks */,
+				CFDA27615FD865C3BF09AB6B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,6 +171,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AB12DD84A7D815016A112B8C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CFDA27615FD865C3BF09AB6B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MSRequestDemo/Pods-MSRequestDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA9F0AF39A3CC8C718A92830 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MSRequestDemo/Pods-MSRequestDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C5C943071F54190E00662B7D /* Sources */ = {
@@ -270,6 +345,7 @@
 		};
 		C5C943231F54190E00662B7D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 318FC9CC00231BCA81BE4EC5 /* Pods-MSRequestDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -284,6 +360,7 @@
 		};
 		C5C943241F54190E00662B7D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41E7A5A2454D24B99DB035F5 /* Pods-MSRequestDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -315,6 +392,7 @@
 				C5C943241F54190E00662B7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
