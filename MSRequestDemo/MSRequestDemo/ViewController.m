@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MSRecipeRequestManager.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"this is root controller");
+    
+    [[MSRecipeRequestManager sharedInstance] loadRecipeListWithKeyWords:@"" Completion:^(MSRequest *request) {
+        if (request.isSuccess) {
+            
+        } else{
+            //error alert
+        }
+    }];
+    
+    MSRecipeRequest *recipeRequest = [MSRecipeRequest new];
+    [recipeRequest loadRecipeDetailWithRecipeID:@"" Completion:^(MSRequest *request) {
+        if (request.isSuccess) {
+            
+        } else{
+            //error alert
+        }
+    }];
+    
 }
 
 @end

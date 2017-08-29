@@ -9,8 +9,12 @@
 #import <Foundation/Foundation.h>
 
 /**
- 配置类-多个域名配置
+ api请求配置类，用于网络请求的相关配置
  */
 @interface MSRequestConfig : NSObject
 
++ (instancetype)sharedInstance;
+
+@property(nonatomic, strong) NSString *apiUrlHost;
+@property(nonatomic, strong) NSString *apiUrlString;
 @end

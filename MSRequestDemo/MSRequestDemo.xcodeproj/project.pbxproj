@@ -14,8 +14,12 @@
 		C5C943191F54190E00662B7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5C943171F54190E00662B7D /* Main.storyboard */; };
 		C5C9431B1F54190E00662B7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5C9431A1F54190E00662B7D /* Assets.xcassets */; };
 		C5C9431E1F54190E00662B7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5C9431C1F54190E00662B7D /* LaunchScreen.storyboard */; };
-		C5C9432C1F54208E00662B7D /* MSBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C9432B1F54208E00662B7D /* MSBaseRequest.m */; };
+		C5C9432C1F54208E00662B7D /* MSRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C9432B1F54208E00662B7D /* MSRequest.m */; };
 		C5C9432F1F5420DC00662B7D /* MSRequestConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C9432E1F5420DC00662B7D /* MSRequestConfig.m */; };
+		C5C943791F550D8300662B7D /* MSRequestCommonParams.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C943781F550D8300662B7D /* MSRequestCommonParams.m */; };
+		C5C9437C1F550F4800662B7D /* MSRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C9437B1F550F4800662B7D /* MSRequestManager.m */; };
+		C5C943831F55193700662B7D /* MSDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C943821F55193700662B7D /* MSDevice.m */; };
+		C5C943871F55545900662B7D /* MSRecipeRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C943861F55545900662B7D /* MSRecipeRequestManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +36,20 @@
 		C5C9431A1F54190E00662B7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5C9431D1F54190E00662B7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5C9431F1F54190E00662B7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C5C9432A1F54208E00662B7D /* MSBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSBaseRequest.h; path = ../../MSRequest/MSBaseRequest.h; sourceTree = "<group>"; };
-		C5C9432B1F54208E00662B7D /* MSBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSBaseRequest.m; path = ../../MSRequest/MSBaseRequest.m; sourceTree = "<group>"; };
+		C5C9432A1F54208E00662B7D /* MSRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSRequest.h; path = ../../MSRequest/MSRequest.h; sourceTree = "<group>"; };
+		C5C9432B1F54208E00662B7D /* MSRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSRequest.m; path = ../../MSRequest/MSRequest.m; sourceTree = "<group>"; };
 		C5C9432D1F5420DC00662B7D /* MSRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSRequestConfig.h; path = ../../MSRequest/MSRequestConfig.h; sourceTree = "<group>"; };
 		C5C9432E1F5420DC00662B7D /* MSRequestConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSRequestConfig.m; path = ../../MSRequest/MSRequestConfig.m; sourceTree = "<group>"; };
+		C5C943761F550C9300662B7D /* MSRequest-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MSRequest-Header.h"; sourceTree = "<group>"; };
+		C5C943771F550D8300662B7D /* MSRequestCommonParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRequestCommonParams.h; sourceTree = "<group>"; };
+		C5C943781F550D8300662B7D /* MSRequestCommonParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRequestCommonParams.m; sourceTree = "<group>"; };
+		C5C9437A1F550F4800662B7D /* MSRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRequestManager.h; sourceTree = "<group>"; };
+		C5C9437B1F550F4800662B7D /* MSRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRequestManager.m; sourceTree = "<group>"; };
+		C5C943811F55193700662B7D /* MSDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDevice.h; sourceTree = "<group>"; };
+		C5C943821F55193700662B7D /* MSDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDevice.m; sourceTree = "<group>"; };
+		C5C943841F55533C00662B7D /* MSRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRequestProtocol.h; sourceTree = "<group>"; };
+		C5C943851F55545900662B7D /* MSRecipeRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRecipeRequestManager.h; sourceTree = "<group>"; };
+		C5C943861F55545900662B7D /* MSRecipeRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRecipeRequestManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +93,8 @@
 		C5C9430D1F54190E00662B7D /* MSRequestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C5C943801F55190A00662B7D /* Utils */,
+				C5C9437F1F5510F700662B7D /* api-demo */,
 				C5C943291F54207900662B7D /* MSRequest */,
 				C5C943111F54190E00662B7D /* AppDelegate.h */,
 				C5C943121F54190E00662B7D /* AppDelegate.m */,
@@ -104,12 +120,36 @@
 		C5C943291F54207900662B7D /* MSRequest */ = {
 			isa = PBXGroup;
 			children = (
-				C5C9432A1F54208E00662B7D /* MSBaseRequest.h */,
-				C5C9432B1F54208E00662B7D /* MSBaseRequest.m */,
+				C5C943841F55533C00662B7D /* MSRequestProtocol.h */,
+				C5C9432A1F54208E00662B7D /* MSRequest.h */,
+				C5C9432B1F54208E00662B7D /* MSRequest.m */,
 				C5C9432D1F5420DC00662B7D /* MSRequestConfig.h */,
 				C5C9432E1F5420DC00662B7D /* MSRequestConfig.m */,
+				C5C943761F550C9300662B7D /* MSRequest-Header.h */,
+				C5C943771F550D8300662B7D /* MSRequestCommonParams.h */,
+				C5C943781F550D8300662B7D /* MSRequestCommonParams.m */,
+				C5C9437A1F550F4800662B7D /* MSRequestManager.h */,
+				C5C9437B1F550F4800662B7D /* MSRequestManager.m */,
 			);
 			name = MSRequest;
+			sourceTree = "<group>";
+		};
+		C5C9437F1F5510F700662B7D /* api-demo */ = {
+			isa = PBXGroup;
+			children = (
+				C5C943851F55545900662B7D /* MSRecipeRequestManager.h */,
+				C5C943861F55545900662B7D /* MSRecipeRequestManager.m */,
+			);
+			path = "api-demo";
+			sourceTree = "<group>";
+		};
+		C5C943801F55190A00662B7D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C5C943811F55193700662B7D /* MSDevice.h */,
+				C5C943821F55193700662B7D /* MSDevice.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		D3C4C3F43A8C5031ADDF16DB /* Pods */ = {
@@ -243,10 +283,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5C943791F550D8300662B7D /* MSRequestCommonParams.m in Sources */,
 				C5C943161F54190E00662B7D /* ViewController.m in Sources */,
 				C5C943131F54190E00662B7D /* AppDelegate.m in Sources */,
-				C5C9432C1F54208E00662B7D /* MSBaseRequest.m in Sources */,
+				C5C9432C1F54208E00662B7D /* MSRequest.m in Sources */,
+				C5C943871F55545900662B7D /* MSRecipeRequestManager.m in Sources */,
 				C5C9432F1F5420DC00662B7D /* MSRequestConfig.m in Sources */,
+				C5C943831F55193700662B7D /* MSDevice.m in Sources */,
+				C5C9437C1F550F4800662B7D /* MSRequestManager.m in Sources */,
 				C5C943101F54190E00662B7D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
