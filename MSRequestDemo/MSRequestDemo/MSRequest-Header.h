@@ -24,6 +24,4 @@ typedef NS_ENUM(NSUInteger , MSRequestMethod) {
 @class MSRequest;
 typedef void(^MSRequestCompletion)(MSRequest *request);
 
-
-
 #endif /* MSRequest_Header_h */

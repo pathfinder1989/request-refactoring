@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		41F699FA5D4E418E3738BA8C /* libPods-MSRequestDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E087AA7D0714247900213C2 /* libPods-MSRequestDemo.a */; };
+		C513CCBB1F59481E00C5A8CB /* RecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C513CCBA1F59481E00C5A8CB /* RecipeViewController.m */; };
 		C5C943101F54190E00662B7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C9430F1F54190E00662B7D /* main.m */; };
 		C5C943131F54190E00662B7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C943121F54190E00662B7D /* AppDelegate.m */; };
 		C5C943161F54190E00662B7D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C943151F54190E00662B7D /* ViewController.m */; };
@@ -26,6 +27,8 @@
 		1E087AA7D0714247900213C2 /* libPods-MSRequestDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MSRequestDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		318FC9CC00231BCA81BE4EC5 /* Pods-MSRequestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSRequestDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MSRequestDemo/Pods-MSRequestDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		41E7A5A2454D24B99DB035F5 /* Pods-MSRequestDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSRequestDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MSRequestDemo/Pods-MSRequestDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C513CCB91F59481E00C5A8CB /* RecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeViewController.h; sourceTree = "<group>"; };
+		C513CCBA1F59481E00C5A8CB /* RecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeViewController.m; sourceTree = "<group>"; };
 		C5C9430B1F54190E00662B7D /* MSRequestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSRequestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C9430F1F54190E00662B7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C5C943111F54190E00662B7D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -100,6 +103,8 @@
 				C5C943121F54190E00662B7D /* AppDelegate.m */,
 				C5C943141F54190E00662B7D /* ViewController.h */,
 				C5C943151F54190E00662B7D /* ViewController.m */,
+				C513CCB91F59481E00C5A8CB /* RecipeViewController.h */,
+				C513CCBA1F59481E00C5A8CB /* RecipeViewController.m */,
 				C5C943171F54190E00662B7D /* Main.storyboard */,
 				C5C9431A1F54190E00662B7D /* Assets.xcassets */,
 				C5C9431C1F54190E00662B7D /* LaunchScreen.storyboard */,
@@ -287,6 +292,7 @@
 				C5C943161F54190E00662B7D /* ViewController.m in Sources */,
 				C5C943131F54190E00662B7D /* AppDelegate.m in Sources */,
 				C5C9432C1F54208E00662B7D /* MSRequest.m in Sources */,
+				C513CCBB1F59481E00C5A8CB /* RecipeViewController.m in Sources */,
 				C5C943871F55545900662B7D /* MSRecipeRequestManager.m in Sources */,
 				C5C9432F1F5420DC00662B7D /* MSRequestConfig.m in Sources */,
 				C5C943831F55193700662B7D /* MSDevice.m in Sources */,

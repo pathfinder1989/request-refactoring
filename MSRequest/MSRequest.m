@@ -33,7 +33,7 @@
 
 - (void)setRequestCompletion:(MSRequestCompletion _Nullable )completion
 {
-    self.requestCompletion = completion;
+    _requestCompletion = completion;
 }
 
 - (NSUInteger)requestID
@@ -53,6 +53,11 @@
     NSError *errorr;
     id rValue = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableLeaves error:&errorr];
     self.responseJSONObject = rValue;
+}
+
+- (void)clearRequestCompletion
+{
+    self.requestCompletion = nil;
 }
 
 #pragma mark -

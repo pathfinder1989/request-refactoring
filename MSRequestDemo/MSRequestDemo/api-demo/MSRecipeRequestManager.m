@@ -11,7 +11,7 @@
 
 @implementation MSRecipeRequestManager
 
-- (MSRequest *)tempRequest
+- (MSRequest *)recipeModuleRequest
 {
     MSRequest *request = [MSRequest new];
     request.requestUrl = @"";
@@ -21,8 +21,8 @@
 
 - (void)loadRecipeListWithKeyWords:(NSString *)keyword Completion:(MSRequestCompletion)completion
 {
-    MSRequest *request = [self tempRequest];
-    request.requestParameters = @{};
+    MSRequest *request = [self recipeModuleRequest];
+    request.requestParameters = @{@"k" : keyword};
     [request startRequestWithCompletion:^(__kindof MSRequest *request) {
         
     }];
@@ -44,11 +44,23 @@
 
 - (void)initialization
 {
-    
+}
+
+- (id _Nullable )requestParameters{
+    return @{@"id" : @"1853504"};
+}
+
+- (NSString *_Nonnull)requestUrl{
+    return @"v6/recipe_detail_new.php";
+}
+
+- (NSString *_Nonnull)requestHost{
+    return @"https://t.api.meishi.cc/";
 }
 
 - (void)loadRecipeDetailWithRecipeID:(NSString *)recipeID Completion:(MSRequestCompletion)completion
 {
+    self.requestParameters = @{@"id" : recipeID};
     [self startRequestWithCompletion:completion];
 }
 @end

@@ -22,12 +22,6 @@
 
 - (NSString *)apiUrlHost
 {
-    return @"";
+    return @"https://t.api.meishi.cc/";
 }
-
-- (NSString *)apiUrlString
-{
-    return @"";
-}
-
 @end

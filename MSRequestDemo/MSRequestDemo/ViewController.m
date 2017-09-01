@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "MSRecipeRequestManager.h"
+#import "RecipeViewController.h"
+
 
 @interface ViewController ()
 
@@ -17,25 +18,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"this is root controller");
     
-    [[MSRecipeRequestManager sharedInstance] loadRecipeListWithKeyWords:@"" Completion:^(MSRequest *request) {
-        if (request.isSuccess) {
-            
-        } else{
-            //error alert
-        }
-    }];
     
-    MSRecipeRequest *recipeRequest = [MSRecipeRequest new];
-    [recipeRequest loadRecipeDetailWithRecipeID:@"" Completion:^(MSRequest *request) {
-        if (request.isSuccess) {
-            
-        } else{
-            //error alert
-        }
-    }];
-    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.backgroundColor = [UIColor lightGrayColor];
+    btn.frame = CGRectMake(100, 100, 100, 100);
+    [self.view addSubview:btn];
+    [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
 }
 
+- (void)btnClick
+{
+    RecipeViewController *controller = [RecipeViewController new];
+    [self.navigationController pushViewController:controller animated:YES];
+}
 @end

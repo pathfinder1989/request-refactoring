@@ -15,6 +15,6 @@
 
 + (instancetype)sharedInstance;
 
+/** host 主机地址 */
 @property(nonatomic, strong) NSString *apiUrlHost;
-@property(nonatomic, strong) NSString *apiUrlString;
 @end

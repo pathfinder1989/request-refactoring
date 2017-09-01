@@ -42,6 +42,8 @@
 @property(nonatomic, strong) NSString * _Nonnull requestUrl;
 @property(nonatomic, strong) NSString * _Nonnull requestHost;
 
+- (void)clearRequestCompletion;
+
 - (id _Nullable )requestParameters;
 
 - (MSRequestMethod)requestMethod;
