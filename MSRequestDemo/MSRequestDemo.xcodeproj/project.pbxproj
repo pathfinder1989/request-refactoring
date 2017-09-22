@@ -17,10 +17,10 @@
 		C5C9431E1F54190E00662B7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5C9431C1F54190E00662B7D /* LaunchScreen.storyboard */; };
 		C5C9432C1F54208E00662B7D /* MSRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C9432B1F54208E00662B7D /* MSRequest.m */; };
 		C5C9432F1F5420DC00662B7D /* MSRequestConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C9432E1F5420DC00662B7D /* MSRequestConfig.m */; };
-		C5C943791F550D8300662B7D /* MSRequestCommonParams.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C943781F550D8300662B7D /* MSRequestCommonParams.m */; };
-		C5C9437C1F550F4800662B7D /* MSRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C9437B1F550F4800662B7D /* MSRequestManager.m */; };
 		C5C943831F55193700662B7D /* MSDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C943821F55193700662B7D /* MSDevice.m */; };
 		C5C943871F55545900662B7D /* MSRecipeRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C943861F55545900662B7D /* MSRecipeRequestManager.m */; };
+		C5D3D9ED1F74E76D000C4FB8 /* MSRequestCommonParams.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D3D9EA1F74E76D000C4FB8 /* MSRequestCommonParams.m */; };
+		C5D3D9EE1F74E76D000C4FB8 /* MSRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D3D9EB1F74E76D000C4FB8 /* MSRequestManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,16 +43,16 @@
 		C5C9432B1F54208E00662B7D /* MSRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSRequest.m; path = ../../MSRequest/MSRequest.m; sourceTree = "<group>"; };
 		C5C9432D1F5420DC00662B7D /* MSRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSRequestConfig.h; path = ../../MSRequest/MSRequestConfig.h; sourceTree = "<group>"; };
 		C5C9432E1F5420DC00662B7D /* MSRequestConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSRequestConfig.m; path = ../../MSRequest/MSRequestConfig.m; sourceTree = "<group>"; };
-		C5C943761F550C9300662B7D /* MSRequest-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MSRequest-Header.h"; sourceTree = "<group>"; };
-		C5C943771F550D8300662B7D /* MSRequestCommonParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRequestCommonParams.h; sourceTree = "<group>"; };
-		C5C943781F550D8300662B7D /* MSRequestCommonParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRequestCommonParams.m; sourceTree = "<group>"; };
-		C5C9437A1F550F4800662B7D /* MSRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRequestManager.h; sourceTree = "<group>"; };
-		C5C9437B1F550F4800662B7D /* MSRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRequestManager.m; sourceTree = "<group>"; };
 		C5C943811F55193700662B7D /* MSDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDevice.h; sourceTree = "<group>"; };
 		C5C943821F55193700662B7D /* MSDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDevice.m; sourceTree = "<group>"; };
-		C5C943841F55533C00662B7D /* MSRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRequestProtocol.h; sourceTree = "<group>"; };
 		C5C943851F55545900662B7D /* MSRecipeRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRecipeRequestManager.h; sourceTree = "<group>"; };
 		C5C943861F55545900662B7D /* MSRecipeRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRecipeRequestManager.m; sourceTree = "<group>"; };
+		C5D3D9E71F74E76D000C4FB8 /* MSRequestProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MSRequestProtocol.h; path = ../../MSRequest/MSRequestProtocol.h; sourceTree = "<group>"; };
+		C5D3D9E81F74E76D000C4FB8 /* MSRequestCommonParams.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MSRequestCommonParams.h; path = ../../MSRequest/MSRequestCommonParams.h; sourceTree = "<group>"; };
+		C5D3D9E91F74E76D000C4FB8 /* MSRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MSRequestManager.h; path = ../../MSRequest/MSRequestManager.h; sourceTree = "<group>"; };
+		C5D3D9EA1F74E76D000C4FB8 /* MSRequestCommonParams.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MSRequestCommonParams.m; path = ../../MSRequest/MSRequestCommonParams.m; sourceTree = "<group>"; };
+		C5D3D9EB1F74E76D000C4FB8 /* MSRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MSRequestManager.m; path = ../../MSRequest/MSRequestManager.m; sourceTree = "<group>"; };
+		C5D3D9EC1F74E76D000C4FB8 /* MSRequest-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MSRequest-Header.h"; path = "../../MSRequest/MSRequest-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,16 +125,16 @@
 		C5C943291F54207900662B7D /* MSRequest */ = {
 			isa = PBXGroup;
 			children = (
-				C5C943841F55533C00662B7D /* MSRequestProtocol.h */,
+				C5D3D9EC1F74E76D000C4FB8 /* MSRequest-Header.h */,
+				C5D3D9E81F74E76D000C4FB8 /* MSRequestCommonParams.h */,
+				C5D3D9EA1F74E76D000C4FB8 /* MSRequestCommonParams.m */,
+				C5D3D9E91F74E76D000C4FB8 /* MSRequestManager.h */,
+				C5D3D9EB1F74E76D000C4FB8 /* MSRequestManager.m */,
+				C5D3D9E71F74E76D000C4FB8 /* MSRequestProtocol.h */,
 				C5C9432A1F54208E00662B7D /* MSRequest.h */,
 				C5C9432B1F54208E00662B7D /* MSRequest.m */,
 				C5C9432D1F5420DC00662B7D /* MSRequestConfig.h */,
 				C5C9432E1F5420DC00662B7D /* MSRequestConfig.m */,
-				C5C943761F550C9300662B7D /* MSRequest-Header.h */,
-				C5C943771F550D8300662B7D /* MSRequestCommonParams.h */,
-				C5C943781F550D8300662B7D /* MSRequestCommonParams.m */,
-				C5C9437A1F550F4800662B7D /* MSRequestManager.h */,
-				C5C9437B1F550F4800662B7D /* MSRequestManager.m */,
 			);
 			name = MSRequest;
 			sourceTree = "<group>";
@@ -242,13 +242,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MSRequestDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CFDA27615FD865C3BF09AB6B /* [CP] Copy Pods Resources */ = {
@@ -288,15 +291,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5C943791F550D8300662B7D /* MSRequestCommonParams.m in Sources */,
 				C5C943161F54190E00662B7D /* ViewController.m in Sources */,
 				C5C943131F54190E00662B7D /* AppDelegate.m in Sources */,
 				C5C9432C1F54208E00662B7D /* MSRequest.m in Sources */,
+				C5D3D9ED1F74E76D000C4FB8 /* MSRequestCommonParams.m in Sources */,
 				C513CCBB1F59481E00C5A8CB /* RecipeViewController.m in Sources */,
+				C5D3D9EE1F74E76D000C4FB8 /* MSRequestManager.m in Sources */,
 				C5C943871F55545900662B7D /* MSRecipeRequestManager.m in Sources */,
 				C5C9432F1F5420DC00662B7D /* MSRequestConfig.m in Sources */,
 				C5C943831F55193700662B7D /* MSDevice.m in Sources */,
-				C5C9437C1F550F4800662B7D /* MSRequestManager.m in Sources */,
 				C5C943101F54190E00662B7D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

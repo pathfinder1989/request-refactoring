@@ -22,9 +22,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     NSLog(@"this is root controller");
     
-        [[MSRecipeRequestManager sharedInstance] loadRecipeListWithKeyWords:nil Completion:^(MSRequest *request) {
+        [[MSRecipeRequestManager sharedInstance] loadRecipeListWithKeyWords:@"" Completion:^(MSRequest *request) {
             if (request.isSuccess) {
     
             } else{
