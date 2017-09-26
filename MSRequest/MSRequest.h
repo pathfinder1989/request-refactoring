@@ -44,14 +44,15 @@
 
 - (void)clearRequestCompletion;
 
-- (id _Nullable )requestParameters;
-
-- (MSRequestMethod)requestMethod;
-
-/** api请求的URL后缀 */
-- (NSString *_Nonnull)requestUrl;
-/** api请求的URLhost */
-- (NSString *_Nonnull)requestHost;
-
-- (NSString *_Nullable)requestUserAgent;
+//如果有需要子类重载
+//- (id _Nullable )requestParameters;
+//
+//- (MSRequestMethod)requestMethod;
+//
+///** api请求的URL后缀 */
+//- (NSString *_Nonnull)requestUrl;
+///** api请求的URLhost */
+//- (NSString *_Nonnull)requestHost;
+//
+//- (NSString *_Nullable)requestUserAgent;
 @end

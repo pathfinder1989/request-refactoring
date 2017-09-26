@@ -120,7 +120,7 @@
 
 - (NSString *)requestKey:(NSURLSessionDataTask *)task
 {
-    return [NSString stringWithFormat:@"%lu",task.taskIdentifier];
+    return [NSString stringWithFormat:@"%lu",(unsigned long)task.taskIdentifier];
 }
 
 - (void)addRequestToRecords:(MSRequest *)request

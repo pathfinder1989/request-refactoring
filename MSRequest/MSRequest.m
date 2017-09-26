@@ -61,22 +61,22 @@
 }
 
 #pragma mark -
-- (id _Nullable )requestParameters{
-    return nil;
-}
-
-- (MSRequestMethod)requestMethod{
-    return MSRequestMethodGet;
-}
-- (NSString *_Nonnull)requestUrl{
-    return @"";
-}
-
-- (NSString *_Nonnull)requestHost{
-    return @"";
-}
-
-- (NSString *_Nullable)requestUserAgent{
-    return @"";
-}
+//- (id _Nullable )requestParameters{
+//    return nil;
+//}
+//
+//- (MSRequestMethod)requestMethod{
+//    return MSRequestMethodGet;
+//}
+//- (NSString *_Nonnull)requestUrl{
+//    return @"";
+//}
+//
+//- (NSString *_Nonnull)requestHost{
+//    return @"";
+//}
+//
+//- (NSString *_Nullable)requestUserAgent{
+//    return @"";
+//}
 @end
