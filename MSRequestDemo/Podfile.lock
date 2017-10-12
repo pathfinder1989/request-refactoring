@@ -14,16 +14,19 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - HappyDNS (0.3.10)
   - OpenUDID (1.0.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
+  - HappyDNS
   - OpenUDID (~> 1.0.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  HappyDNS: 06a9fed2796663fd87626dbf02552933265bf059
   OpenUDID: e7cb6984c7304906ad20f3a36bf087b025896b6b
 
-PODFILE CHECKSUM: 5a833620020cdf145a013029613785d609e6c42c
+PODFILE CHECKSUM: b79b1a698cff72f109abc134e8c141843f08ce02
 
 COCOAPODS: 1.3.1

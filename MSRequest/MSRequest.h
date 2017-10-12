@@ -10,7 +10,7 @@
 #import "MSRequest-Header.h"
 #import "MSRequestProtocol.h"
 
-@interface MSRequest : NSObject <MSRequestProtocol>
+@interface MSRequest : NSObject<MSRequestProtocol>
 
 @property(nonatomic, assign, readonly) NSUInteger requestID;
 
@@ -42,17 +42,9 @@
 @property(nonatomic, strong) NSString * _Nonnull requestUrl;
 @property(nonatomic, strong) NSString * _Nonnull requestHost;
 
+/** 是否要处理DNS解析 */
+@property(nonatomic, assign) BOOL isHandleDNS;
+
 - (void)clearRequestCompletion;
 
-//如果有需要子类重载
-//- (id _Nullable )requestParameters;
-//
-//- (MSRequestMethod)requestMethod;
-//
-///** api请求的URL后缀 */
-//- (NSString *_Nonnull)requestUrl;
-///** api请求的URLhost */
-//- (NSString *_Nonnull)requestHost;
-//
-//- (NSString *_Nullable)requestUserAgent;
 @end

@@ -10,6 +10,7 @@
 #import "MSRequest.h"
 #import "AFNetworking.h"
 #import "MSRequestConfig.h"
+#import "MSHappyDnsManager.h"
 
 @interface MSRequestManager ()
 @property(nonatomic, strong) AFHTTPSessionManager *httpSessionManager;
@@ -43,6 +44,11 @@
     _config = [MSRequestConfig sharedInstance];
     _httpSessionManager = [AFHTTPSessionManager manager];
     _httpSessionManager.operationQueue.maxConcurrentOperationCount = 9;
+    //AFSSLPinningModeNone, 是默认的认证方式，只会在系统的信任的证书列表中对服务端返回的证书进行验证
+    AFSecurityPolicy *policy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
+    policy.allowInvalidCertificates = YES;
+    [policy setValidatesDomainName:NO];
+    _httpSessionManager.securityPolicy = policy;
 }
 
 - (NSString *)urlFullPathForRequest:(MSRequest *)request
@@ -52,10 +58,11 @@
     if ([path hasPrefix:@"http"]) {
         return path;
     }
-    if (host.length <= 0) {
-        host = _config.apiUrlHost;
-    }
+//    if (host.length <= 0) {
+//        host = _config.apiUrlHost;
+//    }
     NSString *fullUrlPath = [NSString stringWithFormat:@"%@%@",host, path];
+    
     return fullUrlPath;
 }
 
@@ -64,12 +71,32 @@
     return request.requestParameters;
 }
 
-- (void)startWithRequest:(MSRequest *)request
+- (void)startWithRequest:(id<MSRequestProtocol>)tRequest;
 {
+    MSRequest *request = tRequest;
     NSString *requestURLFullPath = [self urlFullPathForRequest:request];
+//    if (request.isHandleDNS) {
+//        NSURL *newUrl = [MSHappyDnsManager handleHappyDnsWithDomainUrl:[NSURL URLWithString:requestURLFullPath]];
+//        if (newUrl != nil) {
+//            requestURLFullPath = newUrl.absoluteString;
+//        }
+//    }
+//    NSLog(@"requestURLFullPath--: %@", requestURLFullPath);
+    
     NSDictionary *requestParams = [self paramsForRequest:request];
     
+    //请求
     AFHTTPRequestSerializer *requestSerializer = [[AFHTTPRequestSerializer alloc] init];
+    requestSerializer.timeoutInterval = [request requestTimeoutInterval];
+    
+    if ([request respondsToSelector:@selector(requestUserAgent)]) {
+        NSString *userCustomAgent = [tRequest requestUserAgent];
+        if (userCustomAgent != nil) {
+            [requestSerializer setValue:userCustomAgent forHTTPHeaderField:@"User-Agent"];
+        }
+    }
+    
+    //解析
     AFHTTPResponseSerializer *responseSerializer = [[AFHTTPResponseSerializer alloc] init];
     responseSerializer.acceptableContentTypes = [responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     
@@ -110,8 +137,9 @@
     [request clearRequestCompletion];
 }
 
-- (void)cancelWithRequest:(MSRequest *)request
+- (void)cancelWithRequest:(id<MSRequestProtocol>)tRequest
 {
+    MSRequest *request = tRequest;
     [request clearRequestCompletion];
 }
 

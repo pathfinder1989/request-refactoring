@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "MSRequestConfig.h"
+#import "MSRequestRecipeServer.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [[MSRequestConfig sharedInstance] configServerType:MSApiServerTypeDevelop];
+    [[MSRequestConfig sharedInstance] configServer:[MSRequestRecipeServer new]];
+    
+    
     return YES;
 }
 

@@ -8,6 +8,7 @@
 
 #import "MSRequest.h"
 #import "MSRequestManager.h"
+#import "MSRequestConfig.h"
 
 @interface MSRequest ()
 @property(nonatomic, strong, readwrite, nullable) NSString *responseString;
@@ -15,6 +16,15 @@
 @end
 
 @implementation MSRequest
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.isHandleDNS = YES;
+    }
+    return self;
+}
 
 - (void)startRequest
 {
@@ -61,22 +71,15 @@
 }
 
 #pragma mark -
-//- (id _Nullable )requestParameters{
-//    return nil;
-//}
-//
-//- (MSRequestMethod)requestMethod{
-//    return MSRequestMethodGet;
-//}
-//- (NSString *_Nonnull)requestUrl{
-//    return @"";
-//}
-//
-//- (NSString *_Nonnull)requestHost{
-//    return @"";
-//}
-//
-//- (NSString *_Nullable)requestUserAgent{
-//    return @"";
-//}
+
+- (NSTimeInterval)requestTimeoutInterval
+{
+    return 60;
+}
+
+- (NSString *)requestHost
+{
+    return [MSRequestConfig sharedInstance].apiUrlHost;
+}
+
 @end

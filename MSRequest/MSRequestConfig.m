@@ -11,8 +11,10 @@
 
 @interface MSRequestConfig ()
 /** 配置项目运行环境 */
-@property(nonatomic, assign) MSServerType serverType;
+@property(nonatomic, assign, readwrite) MSApiServerType serverType;
 @property(nonatomic, strong, readwrite) NSString *apiUrlHost;
+@property(nonatomic, strong) MSRequestServer *defaultServer;
+
 @end
 
 @implementation MSRequestConfig
@@ -31,38 +33,43 @@
 {
     self = [super init];
     if (self) {
-        [self initialization];
+        
     }
     return self;
 }
 
-- (void)initialization
-{
-    
-}
-
-- (void)configServerType:(MSServerType)type
+- (void)configServerType:(MSApiServerType)type
 {
     self.serverType = type;
-    switch (type) {
-        case MSServerTypeDevelop:
+}
+
+- (void)configServer:(id<MSRequestServerProtocol>)server
+{
+    self.defaultServer = server;
+}
+
+- (NSString *)apiUrlHost
+{
+    return [self urlPathWithRequestServer:self.defaultServer];
+}
+
+- (NSString *)urlPathWithRequestServer:(MSRequestServer *)server
+{
+    switch (self.serverType) {
+        case MSApiServerTypeDevelop:
         {
-//            self.apiUrlHost = self
+            return [server urlForDevelop];
         }
             break;
-        case MSServerTypeRelease:
+        case MSApiServerTypeRelease:
         {
-            
+            return [server urlForRelease];
         }
             break;
             
         default:
+            return [server urlForRelease];
             break;
     }
 }
-//
-//- (NSString *)apiUrlHost
-//{
-//    return @"https://t.api.meishi.cc/";
-//}
 @end
